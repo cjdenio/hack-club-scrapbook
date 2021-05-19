@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap");
+
+.header-title-name {
+  font-family: "Fira Sans", sans-serif;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 5px 10px 20px;
+  display: inline-block;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+.header-title-name::after {
+  content: " Deni";
+  background-image: url(https://twemoji.maxcdn.com/v/13.0.1/72x72/1f60e.png),
+    url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/60/twitter/259/sun_2600.png);
+  padding-right: 70px;
+  background-position: 86% center, 93% center;
+  background-repeat: no-repeat;
+  background-size: 35px, 57px;
+}
+
+.post-header-date,
+.post-text {
+  color: white !important;
+}
+
+.nav * {
+  color: white !important;
+}
+
+.header-title-avatar {
+  box-shadow: 0px 0px 20px #00000055;
+  border-radius: 10px;
+}
+
+.nav-link-home::before {
+  content: "Wicked Cool ";
+}
+
+.header-link {
+  color: white;
+}
+
+.react-calendar-heatmap text {
+  fill: white;
+  font-weight: bold;
+}
+
+.header-streak::after {
+  content: "!";
+}
+.header-streak {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.header {
+  margin-bottom: 30px;
+}
+.react-calendar-heatmap {
+  height: 0;
+}
+.header-chart {
+  /*padding-left: 30px;*/
+  padding-top: 30px;
+  display: flex;
+  align-items: end;
+}
+/*.header-chart::before {
+  content: "\"People say nothing is impossible, but I do nothing every day.\"";
+  color: white;
+  font-size: 30px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  text-shadow: 0px 0px 20px #00000055;
+}
+.header-chart::after {
+  content: " - Winnie the Pooh";
+  font-size: 30px;
+  font-family: Fira Sans;
+  font-weight: bold;
+  color: white;
+  opacity: 0.66;
+  transition: opacity 300ms;
+}*/
+.header-chart::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 100px;
+  background-image: url("https://scrapbook-view-counter.vercel.app/api/image");
+  margin-bottom: 30px;
+}
+
+body,
+html {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(https://doggo.ninja/vxfc39.png) center bottom;
+  background-color: #65a2ff;
+  background-repeat: repeat-x;
+  background-size: auto 600px;
+}
+body::after {
+  background-color: #e33c26;
+  background-image: url(https://doggo.ninja/1AMcvm.png);
+  animation: sky 120s infinite alternate linear;
+}
+
+#__next,
+.container {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.post {
+  max-height: 400px;
+  overflow: auto;
+}
+
+.post:nth-child(1) {
+  transform: rotateY(20deg) scale(0.9);
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+}
+.post:nth-child(2) {
+  transform: rotateY(-40deg) scale(0.9);
+  position: absolute;
+  left: 350px;
+  bottom: 70px;
+}
+.post:nth-child(3) {
+  transform: rotateY(10deg) rotateZ(5deg);
+  position: absolute;
+  left: 800px;
+  bottom: 50px;
+}
+
+.post {
+  background-color: #333;
+  width: 350px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-radius: 30px;
+  padding: 20px;
+  position: static;
+}
+
+.post:nth-child(n + 4) {
+  display: none;
+}
+
+.posts,
+.container {
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+  perspective: 60em;
+  perspective-origin: 0 -400px;
+  display: block;
+}
+
+.posts {
+  position: absolute;
+  bottom: 0;
+}
+.posts::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  background-image: url(https://doggo.ninja/JMhgtp.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 300px;
+
+  animation: scuttle 8s infinite alternate ease-in-out;
+}
+
+.nav-link-about::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  display: block;
+  position: absolute;
+  animation: sun 120s infinite alternate linear;
+  right: 30px;
+  top: 30px;
+  border-radius: 50%;
+  z-index: 3;
+  background-image: url(https://doggo.ninja/5Bztan.png),
+    linear-gradient(to bottom right, #fee101, #fdb200);
+  background-repeat: no-repeat;
+  background-position: center 40%, center center;
+  background-size: 75%, cover;
+  box-shadow: 0px 0px 20px #fee101;
+}
+
+@keyframes sun {
+  from {
+    transform: none;
+  }
+  to {
+    top: calc(100% - 640px);
+    right: 200px;
+  }
+}
+
+@keyframes scuttle {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(80px) scale(1.1);
+  }
+}
+
+@keyframes sky {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Birdie */
+.css::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 100%;
+  width: 50px;
+  height: 50px;
+  background-image: url(https://doggo.ninja/LcPmEz.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+
+  animation: flapflap 60s infinite linear;
+}
+
+.header-webring-mention {
+  position: absolute;
+  top: calc(100vh - 500px);
+}
+.header-webring-mention:nth-child(1) {
+  left: 100px;
+}
+.header-webring-mention:nth-child(2) {
+  left: 400px;
+}
+.header-webring-mention:nth-child(3) {
+  left: 700px;
+}
+.header-webring h2 {
+  display: none;
+}
+
+@keyframes flapflap {
+  0% {
+    transform: none;
+    left: 0;
+  }
+  49% {
+    transform: none;
+  }
+  50% {
+    transform: scaleX(-1);
+    left: 100%;
+  }
+  99% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: none;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-link-home::after {
+    content: "hi mobile person! Sadly, this scrapbook doesn't work on mobile due to css limitations/laziness. :(";
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 500;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: black;
+  }
+}
+
+.header-webring-mention::after {
+  content: "";
+  background-image: url(https://doggo.ninja/E9Lq4x.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+}
+
+.header-webring-mention {
+  animation: vroom 15s infinite linear;
+}
+.header-webring-mention:nth-child(1) {
+  animation-duration: 20s;
+}
+.header-webring-mention:nth-child(2) {
+  animation-direction: reverse;
+}
+.header-webring-mention:nth-child(3) {
+  animation-duration: 25s;
+}
+
+@keyframes vroom {
+  from {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}

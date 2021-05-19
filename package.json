@@ -1,0 +1,21 @@
+{
+  "name": "hack-club-scrapbook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cjdenio/hack-club-scrapbook.git",
+  "author": "Caleb Denio <cjdenio44@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/web-api": "^6.2.3",
+    "sass": "^1.32.13"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.0"
+  },
+  "scripts": {
+    "build": "sass --no-source-map src:dist",
+    "watch": "sass --watch src:dist",
+    "deploy": "node bin/deploy.js",
+    "format:check": "prettier --check ."
+  }
+}
