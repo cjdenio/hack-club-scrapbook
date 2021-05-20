@@ -1,4 +1,3 @@
-const axios = require("axios").default;
 const { WebClient } = require("@slack/web-api");
 
 async function deploy() {

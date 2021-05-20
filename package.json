@@ -7,6 +7,8 @@
   "license": "MIT",
   "dependencies": {
     "@slack/web-api": "^6.2.3",
+    "chokidar": "^3.5.1",
+    "express": "^4.17.1",
     "sass": "^1.32.13"
   },
   "devDependencies": {
